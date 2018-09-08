@@ -11726,7 +11726,9 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}@media print {
+}
+
+@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11747,7 +11749,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11786,6 +11788,16 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Import the fastai package</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
@@ -11818,6 +11830,16 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Basic settings, like image direction, image size, basic architecture, and batch size</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -11852,9 +11874,7 @@ div#notebook {
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>models	tmp  train  valid
@@ -11866,18 +11886,15 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tfms</span> <span class="o">=</span> <span class="n">tfms_from_model</span><span class="p">(</span><span class="n">arch</span><span class="p">,</span> <span class="n">sz</span><span class="p">,</span> <span class="n">aug_tfms</span> <span class="o">=</span> <span class="n">transforms_side_on</span><span class="p">,</span> <span class="n">max_zoom</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">)</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Definition of the data set for the fastai package</p>
 
 </div>
 </div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -11891,6 +11908,16 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First training of the last layer of the network, 5 epochs, learning rate 0.01</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -11910,9 +11937,7 @@ div#notebook {
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>100%|██████████| 18/18 [00:21&lt;00:00,  1.17s/it]
@@ -11921,19 +11946,17 @@ div#notebook {
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
 
 
 
 
-
  
  
-<div id="9f71ef43-865f-44ba-ae1b-4f112d0ca6b2"></div>
+<div id="8f189d20-2027-4abd-a17d-d5f2306efcc3"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#9f71ef43-865f-44ba-ae1b-4f112d0ca6b2');
+var element = $('#8f189d20-2027-4abd-a17d-d5f2306efcc3');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "a3488f2dc3f74010830c40e254a68a31", "version_major": 2, "version_minor": 0}
@@ -11943,9 +11966,7 @@ var element = $('#9f71ef43-865f-44ba-ae1b-4f112d0ca6b2');
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>epoch      trn_loss   val_loss   accuracy                
@@ -11960,9 +11981,7 @@ var element = $('#9f71ef43-865f-44ba-ae1b-4f112d0ca6b2');
 </div>
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[8]:</div>
-
 
 
 
@@ -11975,6 +11994,17 @@ var element = $('#9f71ef43-865f-44ba-ae1b-4f112d0ca6b2');
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pretty good first results!
+Next , another round of training, 2 epochs, learning_rate 0.01</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -11994,19 +12024,17 @@ var element = $('#9f71ef43-865f-44ba-ae1b-4f112d0ca6b2');
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
 
 
 
 
-
  
  
-<div id="e834d671-0f84-444e-93f1-6c4e09055415"></div>
+<div id="61b3d42e-b41b-4f85-8008-abdbdb5fec13"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#e834d671-0f84-444e-93f1-6c4e09055415');
+var element = $('#61b3d42e-b41b-4f85-8008-abdbdb5fec13');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "6d589724c40549b9829d44937b2707d7", "version_major": 2, "version_minor": 0}
@@ -12016,9 +12044,7 @@ var element = $('#e834d671-0f84-444e-93f1-6c4e09055415');
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>epoch      trn_loss   val_loss   accuracy                   
@@ -12030,9 +12056,7 @@ var element = $('#e834d671-0f84-444e-93f1-6c4e09055415');
 </div>
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[9]:</div>
-
 
 
 
@@ -12045,6 +12069,16 @@ var element = $('#e834d671-0f84-444e-93f1-6c4e09055415');
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Save already obtained weigths</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -12072,13 +12106,22 @@ var element = $('#e834d671-0f84-444e-93f1-6c4e09055415');
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Function to create data</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="n">sz</span><span class="p">,</span><span class="n">bs</span><span class="p">):</span>
-    <span class="n">tfms</span> <span class="o">=</span> <span class="n">tfms_from_model</span><span class="p">(</span><span class="n">arch</span><span class="p">,</span> <span class="n">sz</span><span class="p">,</span> <span class="n">aug_tfms</span> <span class="o">=</span> <span class="n">transforms_side_on</span><span class="p">,</span> <span class="n">max_zoom</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">ImageClassifierData</span><span class="o">.</span><span class="n">from_paths</span><span class="p">(</span><span class="n">PATH</span><span class="p">,</span> <span class="n">tfms</span><span class="o">=</span><span class="n">tfms_from_model</span><span class="p">(</span><span class="n">arch</span><span class="p">,</span> <span class="n">sz</span><span class="p">))</span>
     
     <span class="k">return</span> <span class="n">data</span> <span class="k">if</span> <span class="n">sz</span><span class="o">&gt;</span><span class="mi">300</span> <span class="k">else</span> <span class="n">data</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">340</span><span class="p">,</span> <span class="s2">&quot;tmp&quot;</span><span class="p">)</span>
@@ -12088,6 +12131,16 @@ var element = $('#e834d671-0f84-444e-93f1-6c4e09055415');
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Increase the size of the images</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -12106,19 +12159,17 @@ var element = $('#e834d671-0f84-444e-93f1-6c4e09055415');
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
 
 
 
 
-
  
  
-<div id="d67f2a89-3dd7-4e5b-be46-624b0cee24a0"></div>
+<div id="c0ef3b71-d464-47a4-9f48-b49442d29c09"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#d67f2a89-3dd7-4e5b-be46-624b0cee24a0');
+var element = $('#c0ef3b71-d464-47a4-9f48-b49442d29c09');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "93465f8dd6e24bffb95eacf1caf156a5", "version_major": 2, "version_minor": 0}
@@ -12128,9 +12179,7 @@ var element = $('#d67f2a89-3dd7-4e5b-be46-624b0cee24a0');
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
@@ -12155,6 +12204,16 @@ var element = $('#d67f2a89-3dd7-4e5b-be46-624b0cee24a0');
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>2 more epochs</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
@@ -12172,19 +12231,17 @@ var element = $('#d67f2a89-3dd7-4e5b-be46-624b0cee24a0');
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
 
 
 
 
-
  
  
-<div id="96b7dec0-d779-45e6-9361-a31284d529f8"></div>
+<div id="c6b76207-6559-474a-9e90-2d752aedc88b"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#96b7dec0-d779-45e6-9361-a31284d529f8');
+var element = $('#c6b76207-6559-474a-9e90-2d752aedc88b');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "65bdb290a52146d5a3bdecbf22a7d357", "version_major": 2, "version_minor": 0}
@@ -12194,9 +12251,7 @@ var element = $('#96b7dec0-d779-45e6-9361-a31284d529f8');
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>epoch      trn_loss   val_loss   accuracy                   
@@ -12208,9 +12263,7 @@ var element = $('#96b7dec0-d779-45e6-9361-a31284d529f8');
 </div>
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[15]:</div>
-
 
 
 
@@ -12224,6 +12277,16 @@ var element = $('#96b7dec0-d779-45e6-9361-a31284d529f8');
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Unfreeze the layers of resnet, to fine tune</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
@@ -12231,6 +12294,19 @@ var element = $('#96b7dec0-d779-45e6-9361-a31284d529f8');
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">unfreeze</span><span class="p">()</span>
 <span class="n">lr</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1e-4</span><span class="p">,</span><span class="mf">1e-3</span><span class="p">,</span><span class="mf">1e-2</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Final</span> <span class="n">training</span>
 </pre></div>
 
 </div>
@@ -12255,19 +12331,17 @@ var element = $('#96b7dec0-d779-45e6-9361-a31284d529f8');
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
 
 
 
 
-
  
  
-<div id="331a1f9c-4912-408a-8029-8e5381dbc7a9"></div>
+<div id="e4309934-329f-48e8-a2cd-44f925efe254"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#331a1f9c-4912-408a-8029-8e5381dbc7a9');
+var element = $('#e4309934-329f-48e8-a2cd-44f925efe254');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "5cef35d0702d4740b81467b16ddec057", "version_major": 2, "version_minor": 0}
@@ -12277,9 +12351,7 @@ var element = $('#331a1f9c-4912-408a-8029-8e5381dbc7a9');
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>epoch      trn_loss   val_loss   accuracy                  
@@ -12296,9 +12368,7 @@ var element = $('#331a1f9c-4912-408a-8029-8e5381dbc7a9');
 </div>
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[17]:</div>
-
 
 
 
@@ -12308,6 +12378,19 @@ var element = $('#331a1f9c-4912-408a-8029-8e5381dbc7a9');
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;monkey_final&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
